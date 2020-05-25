@@ -1,5 +1,6 @@
 x = ''
 
+#infinite loop
 while True:
 	choice = input(f'Apakah ingin menggunakan kalkulator{x}? (y/n) ')
 
@@ -46,6 +47,7 @@ while True:
 		print ('Hasil : ' + str(hasil))
 
 		print ('----------------')
+
 		
 	elif choice.lower().strip() == 'n':
 		break
@@ -55,7 +57,3 @@ while True:
 
 	x = ' lagi'
 	continue
-
-
-	
-
