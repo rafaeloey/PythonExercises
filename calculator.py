@@ -1,5 +1,7 @@
+x = ''
+
 while True:
-	choice = input('Apakah ingin menggunakan kalkulator? (y/n) ')
+	choice = input(f'Apakah ingin menggunakan kalkulator{x}? (y/n) ')
 
 	if choice.lower().strip() == 'y':
 		print ('')
@@ -18,31 +20,41 @@ while True:
 		print ('2 = kurang')
 		print ('3 = kali')
 		print ('4 = bagi')
-		operasi = int(input('Masukkan operasi hitung : '))
 
-		if operasi == 1:
-			hasil = angkapertama + angkakedua
-			
-		elif operasi == 2:
-			hasil = angkapertama - angkakedua
-			
-		elif operasi == 3:
-			hasil = angkapertama * angkakedua
-			
-		else:
-			hasil = float(angkapertama) / float(angkakedua)
+		while True:
+			operasi = int(input('Masukkan operasi hitung : '))
+
+			if operasi == 1:
+				hasil = angkapertama + angkakedua
+				break
+				
+			elif operasi == 2:
+				hasil = angkapertama - angkakedua
+				break
+				
+			elif operasi == 3:
+				hasil = angkapertama * angkakedua
+				break
+				
+			elif operasi == 4:
+				hasil = float(angkapertama) / float(angkakedua)
+				break
+
+			else:
+				continue
 
 		print ('Hasil : ' + str(hasil))
 
 		print ('----------------')
-		
-		break
 		
 	elif choice.lower().strip() == 'n':
 		break
 
 	else:
 		continue
+
+	x = ' lagi'
+	continue
 
 
 	
