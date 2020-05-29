@@ -11,14 +11,16 @@ def computegrade(score):
         else:  
             return 'F'
     else:
-        return 'Bad score'
+        return 'Your input is out of range'
 
-entsc = input('Enter score: ')
+while True:
+    entsc = input('Enter score: ')
 
-try:
-    sc = float(entsc)
-except ValueError:
-    print('Bad score')
-    quit()
-grade = computegrade(sc)
-print (grade)
+    try:
+        sc = float(entsc)
+    except ValueError:
+        print('Please input integer')
+        continue
+    grade = computegrade(sc)
+    print (grade)
+    break
